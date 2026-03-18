@@ -1,0 +1,17 @@
+#2. Simulador de Combate: Turnos de RPG
+#Em um jogo de turno, um herói tem 100 de HP e enfrenta um monstro com 100 de HP. O programa deve pedir ao usuário o dano do ataque do herói e o dano do ataque do monstro por rodada. Use um while que continue enquanto ambos estiverem com HP acima de zero. Ao final de cada turno, mostre o HP restante de ambos. Se alguém chegar a 0, encerre e anuncie o vencedor.
+
+_vidaHeroi = 100
+_vidaMonstro = 100
+
+while(_vidaHeroi > 0 and _vidaMonstro > 0):
+  _vidaMonstro -= int(input("Digite o valor do dano que o herói vai causar: "))
+  _vidaHeroi -= int(input("Digite o valor do dano que o monstro vai causar: "))
+  print("Vida restante do herói: ",_vidaHeroi)
+  print("Vida restante do monstro: ",_vidaMonstro)
+if (_vidaHeroi <= 0 and _vidaMonstro <= 0):
+  print("Resultado: empate!")
+elif(_vidaMonstro <= 0):
+  print("Resultado: vitória do herói!")
+else:
+  print("Resultado: vitória do monstro!")
