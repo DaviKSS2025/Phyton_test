@@ -1,0 +1,12 @@
+#4. O Coletor de Itens e Inventário
+#Em um jogo de exploração, o jogador tem uma mochila com capacidade máxima de 15kg. Crie um programa que peça o peso de cada item encontrado no cenário, um por um. O while deve permitir a entrada de itens enquanto o peso total não ultrapassar 15kg. Se um item ultrapassar o limite, o programa deve avisar "Mochila cheia, item descartado" e encerrar, mostrando o peso final total.
+
+_pesoTotal = 0
+while(True):
+  _pesoAAdicionar = float(input("Digite o peso do item a ser adicionado ao inventário:"))
+  if(_pesoTotal + _pesoAAdicionar <= 15):
+    _pesoTotal += _pesoAAdicionar
+  else:
+    print("Mochila cheia, item descartado")
+    break
+print("Peso final total: ",_pesoTotal)
