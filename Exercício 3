@@ -1,0 +1,20 @@
+#3. Monitor de Inundação (Sentinela)
+#Você está desenvolvendo um sistema de alerta para uma Smart City. O programa deve ler o nível do rio (em metros) continuamente.
+
+#* Se o nível for menor que 3m: "Estado Normal".
+#* Entre 3m e 5m: "Estado de Alerta".
+#* Acima de 5m: "Evacuação Imediata".
+#O programa só deve encerrar a leitura se o usuário digitar um valor negativo (flag/bandeira de encerramento).
+
+_nivelRio = 0
+while(_nivelRio >= 0):
+  _nivelRio = int(input("Digite o nível atual do rio. Caso deseje encerrar o programa, digite um valor negativo: "))
+  if (_nivelRio >= 0):
+    if(_nivelRio < 3):
+      print("Estado Normal")
+    elif(_nivelRio >= 3 and _nivelRio <= 5):
+      print("Estado de Alerta")
+    else:
+      print("Evacuação Imediata")
+
+print("Programa encerrado por comando.")
