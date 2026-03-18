@@ -1,0 +1,14 @@
+#5. Média de Temperatura Global
+#Para um painel informativo sobre mudanças climáticas, você precisa calcular a média de temperatura de um período. O usuário deve informar quantos dias deseja analisar. Use o while para ler a temperatura de cada um desses dias. Ao final, o programa deve exibir a média aritmética das temperaturas e informar se a média está "Acima do esperado" (caso seja maior que 25°C) ou "Dentro da normalidade".
+
+_diasAAnalisar = int(input("Informe a quantidade de dias a analisar: "))
+_soma = 0
+i = 0
+while (i < _diasAAnalisar):
+  _soma += float(input(f"Informe a temperatura do dia {i+1}: "))
+  i += 1
+print("A média de temperatura é de ",_soma/_diasAAnalisar,".")
+if(_soma/_diasAAnalisar > 25):
+  print("Está acima do esperado.")
+else:
+  print("Dentro da normalidade.")
